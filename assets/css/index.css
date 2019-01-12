@@ -1,0 +1,21 @@
+body {
+    background: white;
+}
+
+.clock {
+    position: absolute;
+    top: 3%;
+    color: #17D4FE;
+    font-size: 60px;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+}
+.date {
+    position: absolute;
+    top: 3%;
+    left: 35%;
+    color: #17D4FE;
+    font-size: 60px;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+}
