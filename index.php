@@ -5,6 +5,15 @@
 <script src="assets/js/date.js"></script> 
 <script src="assets/js/calendar.js"></script>
 <script src="assets/js/index.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script>
+$(document).ready(function(){
+	setInterval(function(){
+		$("#todo").load('todo.php')
+    }, 1);
+}); //refreshes this div every 2 seconds to check database for new additions.
+</script>
+
 </head> 
 <html>
   <body>
@@ -24,35 +33,8 @@
       !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
       </script>
     </div>
-    <div class="todo">
-     <?php
-      $servername = "localhost";
-      $username = "root";
-      $password = "capstone1";
-      $dbname = "mirror";
-      
-      // Create connection
-      $conn = new mysqli($servername, $username, $password, $dbname);
-      // Check connection
-      if ($conn->connect_error) {
-          die("Connection failed: " . $conn->connect_error);
-      }
-      
-      $sql = "SELECT task FROM todo";
-      $result = $conn->query($sql);
-      
-      if ($result->num_rows > 0) {
-          echo "<table><tr><th>ToDo List</th></tr>";
-          // output data of each row
-          while($row = $result->fetch_assoc()) {
-              echo "<tr><td>".$row["task"]."</td></tr>";
-          }
-          echo "</table>";
-      } else {
-          echo "0 results";
-      }
-      $conn->close();
-      ?> 
+
+    <div class="todo" id="todo">
     </div>
     <div class="network">
       <p>Network Information</p>
