@@ -30,3 +30,21 @@ body {
     font-size: 60px;
     font-family: Orbitron;
     letter-spacing: 7px;
+}
+.todo {
+    position: absolute;
+    top: 80%;
+    color: #17D4FE;
+    font-size: 60px;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+    }
+.network {
+    position: absolute;
+    top: 80%;
+    left: 85%;
+    color: #17D4FE;
+    font-size: 30px;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+    }
