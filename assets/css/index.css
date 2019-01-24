@@ -25,7 +25,8 @@ body {
 }
 .weather {
     position: absolute;
-    left: 80%;
+    top: -12%;
+    left: 83%;
     width: 295px;
     font-size: 60px;
     font-family: Orbitron;
@@ -41,8 +42,8 @@ body {
     }
 .network {
     position: absolute;
-    top: 80%;
-    left: 85%;
+    top: 70%;
+    left: 75%;
     color: #17D4FE;
     font-size: 30px;
     font-family: Orbitron;
