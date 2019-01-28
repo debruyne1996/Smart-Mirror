@@ -1,3 +1,4 @@
+      <script src="assets/js/clock.js"></script> 
       <?php
       $servername = "localhost";
       $username = "root";
@@ -11,11 +12,11 @@
           die("Connection failed: " . $conn->connect_error);
       }
       
-      $sql = "SELECT value FROM divider";
+      $sql = "SELECT showdiv FROM date";
       $result = $conn->query($sql);
       
       if ($result->num_rows > 0) {
           echo "<script type='text/javascript'> showTime() </script>";
       }
       $conn->close();
-      ?>
+      ?> 

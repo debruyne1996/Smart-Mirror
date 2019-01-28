@@ -16,6 +16,7 @@
       
       if ($result->num_rows > 0) {
           echo "<p>Network Information</p>";
+          echo $_SERVER["SERVER_NAME"];
       }
       $conn->close();
       ?> 
