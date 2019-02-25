@@ -1,6 +1,6 @@
       <?php
       $servername = "localhost";
-      $username = "root";
+      $username = "phpmyadmin";
       $password = "capstone1";
       $dbname = "mirror";
       
@@ -15,7 +15,7 @@
       $result = $conn->query($sql);
       
       if ($result->num_rows > 0) {
-          echo '<script> $(document).ready(function(){setInterval(function(){$("#todo").load("todo.php")}, 1);}); </script>';
+          echo '<script> $(document).ready(function(){setInterval(function(){$("#todo").load("todo.php")}, 5000);}); </script>';
       }
       $conn->close();
       ?> 

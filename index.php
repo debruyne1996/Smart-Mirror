@@ -26,7 +26,7 @@
       ?> 
     </div>
     <div class="calender">
-    <iframe src="https://calendar.google.com/calendar/b/1/embed?height=400&amp;wkst=1&amp;bgcolor=%23000000&amp;src=badebruyne%40oakland.edu&amp;color=%231B887A&amp;ctz=America%2FNew_York" style="border-width:0" width="400" height="400" frameborder="0" scrolling="no"></iframe>
+    <iframe src="https://calendar.google.com/calendar/embed?height=400&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=badebruyne%40oakland.edu&amp;color=%231B887A&amp;ctz=America%2FNew_York" style="border-width:0" width="400" height="400" frameborder="0" scrolling="no"></iframe>
     </div>
     <div class="todo" id="todo">
       <?php

@@ -2,7 +2,7 @@
     position: absolute;
     top: 3%;
     color: #17D4FE;
-    font-size: 60px;
+    font-size: 30px;
     font-family: Orbitron;
     letter-spacing: 7px;
 }
@@ -11,7 +11,7 @@
     top: 3%;
     left: 35%;
     color: #17D4FE;
-    font-size: 60px;
+    font-size: 30px;
     font-family: Orbitron;
     letter-spacing: 7px;
 }
@@ -25,25 +25,25 @@ body {
 }
 .weather {
     position: absolute;
-    top: -12%;
-    left: 83%;
-    width: 295px;
-    font-size: 60px;
+    top: -2%;
+    left: 74%;
+    width: 270px;
+    font-size: 30px;
     font-family: Orbitron;
     letter-spacing: 7px;
 }
 .todo {
     position: absolute;
-    top: 80%;
+    top: 90%;
     color: #17D4FE;
-    font-size: 60px;
+    font-size: 40px;
     font-family: Orbitron;
     letter-spacing: 7px;
     }
 .network {
     position: absolute;
-    top: 70%;
-    left: 75%;
+    top: 95%;
+    left: 73%;
     color: #17D4FE;
     font-size: 30px;
     font-family: Orbitron;
@@ -51,7 +51,7 @@ body {
     }
 .calender {
     position: absolute;
-    top: 25%;
+    top: 35%;
     color: #17D4FE;
     font-size: 60px;
     font-family: Orbitron;

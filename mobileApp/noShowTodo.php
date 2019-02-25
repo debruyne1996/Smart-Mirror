@@ -12,7 +12,7 @@ if ($conn->connect_error) {
 }
 
 // sql to delete a record
-$sql = "DELETE FROM date WHERE id=1";
+$sql = "DELETE FROM todoShow WHERE id=1";
 
 if ($conn->query($sql) === TRUE) {
     echo "Record deleted successfully";

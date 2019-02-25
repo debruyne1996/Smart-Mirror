@@ -1,7 +1,7 @@
       <script src="assets/js/clock.js"></script> 
       <?php
       $servername = "localhost";
-      $username = "root";
+      $username = "phpmyadmin";
       $password = "capstone1";
       $dbname = "mirror";
       

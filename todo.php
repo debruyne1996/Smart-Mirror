@@ -1,6 +1,6 @@
      <?php
       $servername = "localhost";
-      $username = "root";
+      $username = "phpmyadmin";
       $password = "capstone1";
       $dbname = "mirror";
       
@@ -15,7 +15,7 @@
       $result = $conn->query($sql);
       
       if ($result->num_rows > 0) {
-          echo "<table><tr><th>ToDo List</th></tr>";
+          echo "<table>ToDo List";
           // output data of each row
           while($row = $result->fetch_assoc()) {
               echo "<tr><td>".$row["task"]."</td></tr>";
