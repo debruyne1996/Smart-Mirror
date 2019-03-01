@@ -1,4 +1,4 @@
-      <?php
+     <?php
       $servername = "localhost";
       $username = "phpmyadmin";
       $password = "capstone1";
@@ -11,11 +11,18 @@
           die("Connection failed: " . $conn->connect_error);
       }
       
-      $sql = "SELECT showdiv FROM clock";
+      $sql = "SELECT task FROM todo";
       $result = $conn->query($sql);
       
       if ($result->num_rows > 0) {
-          echo "<script type='text/javascript'> showTime() </script>";
+          echo "<table>ToDo List";
+          // output data of each row
+          while($row = $result->fetch_assoc()) {
+              echo "<tr><td>".$row["task"]."</td></tr>";
+          }
+          echo "</table>";
+      } else {
+          echo "No ongoing tasks";
       }
       $conn->close();
       ?> 

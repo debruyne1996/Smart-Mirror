@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Smart Mirror Mobile App</title>
+    <title>CSI 3660 Project</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/jumbotron/">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
@@ -20,39 +20,58 @@
     <!-- Custom styles for this template -->
     <link href="jumbotron.css" rel="stylesheet">
   </head>
+<?php
+require_once("db_connect.php");
+?>
+<body>
+<h2>
+    Your todo list
+</h2>
+<p><a href="create.php">Add a new task</a></p>
+<?php
+db();
+global $link;
+$query  = "SELECT id, task FROM todo";
+$result = mysqli_query($link, $query);
+//check if there's any data inside the table
+if(mysqli_num_rows($result) >= 1){
+    while($row = mysqli_fetch_array($result)){
+        $id = $row['id'];
+        $task = $row['task'];
+        ?>
 
+    <ul>
+        <li><a href="detail.php?id=<?php echo $id?>"><?php echo $task ?></a></li>
+        <button type="button"><a href="edit.php?id=<?php echo $id?>">Edit</a></button>
+        <button type="button"><a href="delete.php?id=<?php echo $id?>">Delete</a></button>
+    </ul>
+<?php
+    }
+}
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron" style="background-image: url"https://png.pngtree.com/thumb_back/fw800/back_pic/03/51/89/495792dd7f60750.jpg");>
-      <div class="container">
-        <h1 style="text-align: center">Welcome to your Smart Mirror Control Panel!<br>
-    </h1>
-<h4 style="text-align: center">  A project by Bryan Debruyne, Alexa Atkins, Austin Sherry, Ryan Zeski, and Chris Pececaro<h4/>
-      </div>
-    </div>
-
+?>
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-4" img align="middle">
           <h2 style="text-align:center">Mirror Control Panel</h2>
-	  <img src="https://techcrunch.com/wp-content/uploads/2017/05/onedrive-illo3.jpg?w=730&crop=1" style=" width: 200px; height: 100px;" > 
+          <img src="https://techcrunch.com/wp-content/uploads/2017/05/onedrive-illo3.jpg?w=730&crop=1" style=" width: 200px; height: 100px;" > 
           <p style="text-align:center">Personalize your mirror to fit your lifestyle! </p>
-          <p style="text-align:center"><a class="btn btn-secondary" href="control.php" role="button">Click Here &raquo;</a></p>
+          <p style="text-align:center"><a class="btn btn-secondary" href="../control.php" role="button">Click Here &raquo;</a></p>
         </div>
         <div class="col-md-4" img align="middle">
-          <h2 style="text-align:center">ToDo List</h2>
-		 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQef5Uux9SgQDNLh6H1HxO-eX3Sc5el2SMfdnwfQlnKYA_b37FnCg" style=" width: 200px; height: 100px;">
-
-          <p style="text-align:center">View your ToDo list and modify it on the fly! </p>
-	 <p style="text-align:center"><a class="btn btn-secondary" href="todo" role="button">Click Here &raquo;</a></p>
-       </div>
-        <div class="col-md-4" img align="middle">
-          <h2 style="text-align:center">FAQ</h2>
+          <h2 style="text-align:center">Home</h2>
 		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRfDmmNM80epGd5K9vhprnCj_6SOzAxwzPKVT9D7Wz_Fe6FeMuKw" style=" width: 200px; height: 100px;">
 
-          <p style="text-align:center">Follow this link for some FAQ's of the smart mirror operation.</p>
-          <p style="text-align:center"><a class="btn btn-secondary" href="report.html" role="button">Click Here &raquo;</a></p>
+          <p style="text-align:center">Go back Home!</p>
+          <p style="text-align:center"><a class="btn btn-secondary" href="../index.html" role="button">Click Here &raquo;</a></p>
+        </div>
+        <div class="col-md-4" img align="middle">
+          <h2 style="text-align:center">Report</h2>
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRfDmmNM80epGd5K9vhprnCj_6SOzAxwzPKVT9D7Wz_Fe6FeMuKw" style=" width: 200px; height: 100px;">
+
+          <p style="text-align:center">Follow this link for our project report!.</p>
+          <p style="text-align:center"><a class="btn btn-secondary" href="../report.html" role="button">Click Here &raquo;</a></p>
         </div>
       </div>
 
@@ -61,7 +80,7 @@
       <footer>
         <p style="text-align: center">&copy; Senior Capstone Winter 2019</p>
       </footer>
-    </div> <!-- /container -->
+    </div>
 
 
     <!-- Bootstrap core JavaScript
@@ -74,4 +93,7 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
+</html>
+
+</body>
 </html>

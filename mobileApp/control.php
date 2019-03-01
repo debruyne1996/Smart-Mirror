@@ -30,15 +30,23 @@
 <h4 style="text-align: center">  A project by Bryan Debruyne, Alexa Atkins, Austin Sherry, Ryan Zeski, and Chris Pececaro<h4/>
       </div>
     </div>
+    <div style="text-align: center">
+    <a class="btn btn-secondary" href="noShowDate.php" role="button">Remove the Date Module</a><a class="btn btn-secondary" href="showDate.php" role="button">Add the Date Module</a><br>
+    <br><a class="btn btn-secondary" href="noShowTodo.php" role="button">Remove the ToDo Module</a><a class="btn btn-secondary" href="showTodo.php" role="button">Add the ToDo Module</a><br>
+    <br><a class="btn btn-secondary" href="noShowWeather.php" role="button">Remove the Weather Module</a><a class="btn btn-secondary" href="showWeather.php" role="button">Add the Weather Module</a><br>
+    <br><a class="btn btn-secondary" href="noShowNetwork.php" role="button">Remove the Network Module</a><a class="btn btn-secondary" href="showNetwork.php" role="button">Add the Network Module</a><br>
+    <br><a class="btn btn-secondary" href="noShowClock.php" role="button">Remove the Clock Module</a><a class="btn btn-secondary" href="showClock.php" role="button">Add the Clock Module</a><br>
+    <br><a class="btn btn-secondary" href="noShowCalender.php" role="button">Remove the Calender Module</a><a class="btn btn-secondary" href="showCalender.php" role="button">Add the Calender Module</a><br>
+    </div>
 
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-4" img align="middle">
-          <h2 style="text-align:center">Mirror Control Panel</h2>
-	  <img src="https://techcrunch.com/wp-content/uploads/2017/05/onedrive-illo3.jpg?w=730&crop=1" style=" width: 200px; height: 100px;" > 
-          <p style="text-align:center">Personalize your mirror to fit your lifestyle! </p>
-          <p style="text-align:center"><a class="btn btn-secondary" href="control.php" role="button">Click Here &raquo;</a></p>
+          <h2 style="text-align:center">Home</h2>
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRfDmmNM80epGd5K9vhprnCj_6SOzAxwzPKVT9D7Wz_Fe6FeMuKw" style=" width: 200px; height: 100px;">
+          <p style="text-align:center">Go back Home!</p>
+          <p style="text-align:center"><a class="btn btn-secondary" href="index.html" role="button">Click Here &raquo;</a></p>
         </div>
         <div class="col-md-4" img align="middle">
           <h2 style="text-align:center">ToDo List</h2>

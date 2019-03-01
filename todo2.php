@@ -1,4 +1,4 @@
-      <?php
+    <?php
       $servername = "localhost";
       $username = "phpmyadmin";
       $password = "capstone1";
@@ -15,7 +15,7 @@
       $result = $conn->query($sql);
       
       if ($result->num_rows > 0) {
-          echo '<script> $(document).ready(function(){setInterval(function(){$("#todo").load("todo.php")}, 5000);}); </script>';
+         
+          echo '<script> $(document).ready(function(){setInterval(function(){$("#todo").load("todoo.php")}, 5000);});</script>';
       }
-      $conn->close();
-      ?> 
+      ?>

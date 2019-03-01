@@ -1,4 +1,3 @@
-      <script src="assets/js/clock.js"></script> 
       <?php
       $servername = "localhost";
       $username = "phpmyadmin";
